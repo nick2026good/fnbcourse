@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>餐飲創業實戰班｜讓你避免 90% 的新手地雷</title>
+  <meta name="description" content="由擁有近 10 年居酒屋經營經驗的 Nick 老師主講，五大章節、十五堂課，帶你從零到開店的完整指南。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700;900&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+<style>
+:root {
+  --bg-primary: #1A1A2E;
+  --bg-secondary: #16213E;
+  --bg-card: #2D2D44;
+  --bg-card-hover: #363652;
+  --color-gold: #E8A87C;
+  --color-gold-light: #F2C49E;
+  --color-red: #C84B31;
+  --color-red-hover: #E05535;
+  --color-text: #F5F0E8;
+  --color-text-muted: #A09880;
+  --color-text-dim: #6B6880;
+  --color-border: rgba(232, 168, 124, 0.2);
+  --font-serif: 'Noto Serif TC', serif;
+  --font-sans: 'Noto Sans TC', sans-serif;
+  --transition: 0.3s ease;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-gold: 0 4px 20px rgba(232, 168, 124, 0.25);
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: var(--font-sans); background-color: var(--bg-primary); color: var(--color-text); line-height: 1.7; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; display: block; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.section-label { display: inline-block; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-gold); border: 1px solid var(--color-border); padding: 5px 16px; border-radius: 50px; margin-bottom: 16px; }
+.section-title { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; line-height: 1.3; color: var(--color-text); margin-bottom: 16px; }
+.section-title .highlight { color: var(--color-gold); }
+.section-desc { font-size: 1.05rem; color: var(--color-text-muted); max-width: 600px; margin-bottom: 48px; }
+.btn-primary { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--color-red), #E05535); color: #fff; font-family: var(--font-sans); font-size: 1rem; font-weight: 700; padding: 16px 36px; border-radius: 50px; border: none; cursor: pointer; transition: transform var(--transition), box-shadow var(--transition); box-shadow: 0 4px 20px rgba(200, 75, 49, 0.4); }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200, 75, 49, 0.55); }
+.btn-outline { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--color-gold); color: var(--color-gold); padding: 12px 28px; border-radius: 50px; font-weight: 500; transition: all var(--transition); }
+.btn-outline:hover { background: var(--color-gold); color: var(--bg-primary); }
+.navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 16px 0; transition: background var(--transition), box-shadow var(--transition); }
+.navbar.scrolled { background: rgba(22, 21, 38, 0.95); backdrop-filter: blur(12px); box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4); }
+.nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 700; color: var(--color-gold); display: flex; align-items: center; gap: 8px; }
+.nav-logo-icon { width: 36px; height: 36px; background: linear-gradient(135deg, var(--color-red), #E05535); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1rem; }
+.nav-cta-btn { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--color-red), #E05535); color: #fff; padding: 10px 22px; border-radius: 50px; font-size: 0.9rem; font-weight: 600; transition: transform var(--transition), box-shadow var(--transition); box-shadow: 0 3px 12px rgba(200, 75, 49, 0.35); }
+.nav-cta-btn:hover { transform: translateY(-1px); box-shadow: 0 5px 18px rgba(200, 75, 49, 0.5); }
+.hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 100px 0 60px; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 60% at 50% 0%, rgba(232, 168, 124, 0.12) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 80% 80%, rgba(200, 75, 49, 0.1) 0%, transparent 60%); pointer-events: none; }
+.hero-bg-overlay { position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23E8A87C' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); pointer-events: none; opacity: 0.5; }
+.hero-content { position: relative; z-index: 1; max-width: 820px; }
+.hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(200, 75, 49, 0.2); border: 1px solid rgba(200, 75, 49, 0.4); color: #FF7A56; padding: 6px 18px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 24px; animation: pulse-badge 2s ease-in-out infinite; }
+@keyframes pulse-badge { 0%, 100% { box-shadow: 0 0 0 0 rgba(200, 75, 49, 0.3); } 50% { box-shadow: 0 0 0 8px rgba(200, 75, 49, 0); } }
+.hero-title { font-family: var(--font-serif); font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 900; line-height: 1.15; color: var(--color-text); margin-bottom: 16px; display: flex; flex-direction: column; gap: 8px; }
+.hero-title-sub { display: block; font-size: clamp(1.2rem, 3vw, 1.8rem); font-weight: 500; color: var(--color-text-muted); }
+.hero-title-sub em { font-style: normal; color: var(--color-gold); font-weight: 700; }
+.hero-desc { font-size: clamp(0.95rem, 2vw, 1.1rem); color: var(--color-text-muted); margin-bottom: 28px; line-height: 1.8; }
+.hero-meta { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 28px; }
+.hero-meta span { display: inline-flex; align-items: center; gap: 8px; font-size: 0.9rem; color: var(--color-text-muted); }
+.hero-meta i { color: var(--color-gold); }
+.hero-price { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 28px; }
+.hero-original-price { font-size: 1rem; color: var(--color-text-dim); text-decoration: line-through; }
+.hero-current-price { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; color: var(--color-gold); }
+.btn-hero { font-size: 1.1rem; padding: 18px 48px; margin-bottom: 36px; }
+.countdown-wrapper { display: inline-block; }
+.countdown-label { font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.countdown-label i { color: var(--color-gold); }
+.countdown { display: flex; align-items: center; gap: 8px; }
+.countdown-item { display: flex; flex-direction: column; align-items: center; background: var(--bg-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 12px 18px; min-width: 72px; }
+.countdown-item span { font-family: var(--font-serif); font-size: 2rem; font-weight: 700; color: var(--color-gold); line-height: 1; }
+.countdown-item label { font-size: 0.7rem; color: var(--color-text-muted); margin-top: 4px; letter-spacing: 0.1em; }
+.countdown-sep { font-size: 1.8rem; font-weight: 700; color: var(--color-gold); line-height: 1; margin-bottom: 18px; }
+.countdown-sm .countdown-item { padding: 8px 12px; min-width: 56px; }
+.countdown-sm .countdown-item span { font-size: 1.4rem; }
+.countdown-sm .countdown-sep { font-size: 1.2rem; margin-bottom: 14px; }
+.hero-scroll-hint { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); color: var(--color-text-dim); font-size: 1rem; animation: bounce 2s ease-in-out infinite; }
+@keyframes bounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
+.pain-section { padding: 100px 0; background: var(--bg-secondary); position: relative; overflow: hidden; }
+.pain-section::before { content: ''; position: absolute; top: -60px; left: 0; right: 0; height: 60px; background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary)); }
+.pain-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 48px; }
+.pain-card { background: var(--bg-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 28px 24px; display: flex; align-items: flex-start; gap: 16px; transition: transform var(--transition), border-color var(--transition); }
+.pain-card:hover { transform: translateY(-4px); border-color: rgba(232, 168, 124, 0.4); }
+.pain-icon { width: 44px; height: 44px; min-width: 44px; background: rgba(200, 75, 49, 0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--color-red); font-size: 1.1rem; }
+.pain-card p { font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.6; font-style: italic; }
+.pain-cta { text-align: center; }
+.pain-cta p { font-size: 1.1rem; color: var(--color-text); margin-bottom: 20px; }
+.curriculum-section { padding: 100px 0; background: var(--bg-primary); }
+.curriculum-list { display: flex; flex-direction: column; gap: 16px; }
+.chapter-card { background: var(--bg-card); border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; transition: border-color var(--transition); }
+.chapter-card:hover { border-color: rgba(232, 168, 124, 0.4); }
+.chapter-card.active { border-color: rgba(232, 168, 124, 0.5); }
+.chapter-header { display: flex; align-items: center; gap: 16px; padding: 22px 24px; cursor: pointer; user-select: none; transition: background var(--transition); }
+.chapter-header:hover { background: var(--bg-card-hover); }
+.chapter-num { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; color: var(--color-gold); background: rgba(232, 168, 124, 0.1); padding: 4px 12px; border-radius: 50px; white-space: nowrap; }
+.chapter-info { flex: 1; }
+.chapter-info h3 { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 700; color: var(--color-text); margin-bottom: 2px; }
+.chapter-lessons { font-size: 0.8rem; color: var(--color-text-dim); }
+.chapter-toggle-icon { color: var(--color-gold); transition: transform var(--transition); font-size: 0.9rem; }
+.chapter-card.active .chapter-toggle-icon { transform: rotate(180deg); }
+.chapter-body { display: none; padding: 0 24px 24px; border-top: 1px solid var(--color-border); }
+.chapter-body.open { display: block; }
+.lesson-item { display: flex; align-items: flex-start; gap: 14px; padding: 18px 0; border-bottom: 1px solid rgba(232, 168, 124, 0.08); }
+.lesson-item:last-child { border-bottom: none; padding-bottom: 0; }
+.lesson-item > i { color: var(--color-gold); font-size: 1rem; margin-top: 3px; min-width: 18px; }
+.lesson-item strong { display: block; font-size: 0.95rem; color: var(--color-text); margin-bottom: 4px; }
+.lesson-item p { font-size: 0.875rem; color: var(--color-text-muted); line-height: 1.6; }
+.instructor-section { padding: 100px 0; background: var(--bg-secondary); position: relative; overflow: hidden; }
+.instructor-section::before { content: ''; position: absolute; top: -60px; left: 0; right: 0; height: 60px; background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary)); }
+.instructor-wrapper { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
+.instructor-avatar-wrap { display: flex; flex-direction: column; align-items: center; gap: 16px; flex-shrink: 0; }
+.instructor-avatar { width: 200px; height: 200px; border-radius: 50%; background: linear-gradient(135deg, var(--bg-card), var(--bg-card-hover)); border: 3px solid var(--color-gold); display: flex; align-items: center; justify-content: center; font-size: 5rem; color: var(--color-gold); box-shadow: 0 0 40px rgba(232, 168, 124, 0.2); overflow: hidden; }
+.instructor-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.instructor-badge-wrap { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+.instructor-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(232, 168, 124, 0.1); border: 1px solid var(--color-border); color: var(--color-gold); padding: 5px 14px; border-radius: 50px; font-size: 0.78rem; font-weight: 600; }
+.instructor-info { flex: 1; min-width: 280px; }
+.instructor-subtitle { font-size: 0.82rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-gold); margin-bottom: 6px; }
+.instructor-name { font-family: var(--font-serif); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; color: var(--color-text); margin-bottom: 16px; }
+.instructor-divider { width: 60px; height: 3px; background: linear-gradient(to right, var(--color-gold), var(--color-red)); border-radius: 2px; margin-bottom: 20px; }
+.instructor-bio { font-size: 0.97rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 14px; }
+.instructor-bio strong { color: var(--color-gold); }
+.instructor-stats { display: flex; gap: 32px; margin-top: 28px; flex-wrap: wrap; }
+.stat-item { display: flex; flex-direction: column; }
+.stat-item strong { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 900; color: var(--color-gold); line-height: 1; }
+.stat-item span { font-size: 0.82rem; color: var(--color-text-dim); margin-top: 4px; }
+.testimonials-section { padding: 100px 0; background: var(--bg-primary); }
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.testimonial-card { background: var(--bg-card); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 28px; transition: transform var(--transition), box-shadow var(--transition); }
+.testimonial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-gold); }
+.testimonial-stars { color: #F5A623; font-size: 0.9rem; margin-bottom: 14px; display: flex; gap: 3px; }
+.testimonial-text { font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 20px; font-style: italic; }
+.testimonial-author { display: flex; align-items: center; gap: 12px; }
+.testimonial-avatar { width: 42px; height: 42px; border-radius: 50%; background: linear-gradient(135deg, var(--color-gold), var(--color-red)); display: flex; align-items: center; justify-content: center; font-size: 1rem; font-weight: 700; color: #fff; flex-shrink: 0; }
+.testimonial-author strong { display: block; font-size: 0.9rem; color: var(--color-text); }
+.testimonial-author span { font-size: 0.78rem; color: var(--color-text-dim); }
+.pricing-section { padding: 100px 0; background: var(--bg-secondary); text-align: center; position: relative; overflow: hidden; }
+.pricing-section::before { content: ''; position: absolute; top: -60px; left: 0; right: 0; height: 60px; background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary)); }
+.pricing-section::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 70% 50% at 50% 50%, rgba(200, 75, 49, 0.06) 0%, transparent 70%); pointer-events: none; }
+.pricing-card-wrap { display: flex; justify-content: center; }
+.pricing-card { position: relative; background: var(--bg-card); border: 2px solid rgba(232, 168, 124, 0.4); border-radius: var(--radius-lg); padding: 48px 48px 40px; max-width: 520px; width: 100%; box-shadow: var(--shadow), var(--shadow-gold); z-index: 1; }
+.pricing-badge { display: inline-block; background: linear-gradient(135deg, var(--color-red), #E05535); color: #fff; font-size: 0.85rem; font-weight: 700; padding: 6px 20px; border-radius: 50px; margin-bottom: 20px; }
+.pricing-title { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; color: var(--color-text); margin-bottom: 12px; }
+.pricing-original { font-size: 0.95rem; color: var(--color-text-dim); margin-bottom: 8px; }
+.pricing-price { display: flex; align-items: flex-start; justify-content: center; gap: 4px; margin-bottom: 8px; }
+.pricing-currency { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 700; color: var(--color-gold); margin-top: 10px; }
+.pricing-amount { font-family: var(--font-serif); font-size: 4rem; font-weight: 900; color: var(--color-gold); line-height: 1; }
+.pricing-discount-tag { display: inline-block; background: rgba(232, 168, 124, 0.1); border: 1px solid rgba(232, 168, 124, 0.3); color: var(--color-gold); font-size: 0.82rem; font-weight: 600; padding: 4px 14px; border-radius: 50px; margin-bottom: 28px; }
+.pricing-features { list-style: none; text-align: left; margin-bottom: 32px; display: flex; flex-direction: column; gap: 12px; }
+.pricing-features li { display: flex; align-items: center; gap: 12px; font-size: 0.92rem; color: var(--color-text-muted); }
+.pricing-features li i { color: #4CAF50; font-size: 0.85rem; min-width: 18px; }
+.btn-pricing { width: 100%; justify-content: center; font-size: 1.1rem; padding: 18px 24px; margin-bottom: 20px; }
+.pricing-guarantee { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.85rem; color: var(--color-text-dim); margin-bottom: 24px; }
+.pricing-guarantee i { color: #4CAF50; }
+.pricing-guarantee strong { color: var(--color-text-muted); }
+.pricing-countdown { border-top: 1px solid var(--color-border); padding-top: 20px; }
+.pricing-countdown p { font-size: 0.82rem; color: var(--color-text-dim); margin-bottom: 12px; display: flex; align-items: center; justify-content: center; gap: 6px; }
+.pricing-countdown i { color: var(--color-gold); }
+.pricing-countdown .countdown { justify-content: center; }
+.faq-section { padding: 100px 0; background: var(--bg-primary); }
+.faq-list { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+.faq-item { background: var(--bg-card); border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; transition: border-color var(--transition); }
+.faq-item.active { border-color: rgba(232, 168, 124, 0.4); }
+.faq-question { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 24px; cursor: pointer; user-select: none; transition: background var(--transition); }
+.faq-question:hover { background: var(--bg-card-hover); }
+.faq-question span { font-size: 0.97rem; font-weight: 600; color: var(--color-text); }
+.faq-icon { color: var(--color-gold); font-size: 0.9rem; transition: transform var(--transition); flex-shrink: 0; }
+.faq-item.active .faq-icon { transform: rotate(45deg); }
+.faq-answer { display: none; padding: 0 24px 20px; border-top: 1px solid var(--color-border); }
+.faq-answer.open { display: block; }
+.faq-answer p { font-size: 0.92rem; color: var(--color-text-muted); line-height: 1.8; padding-top: 16px; }
+.faq-answer strong { color: var(--color-gold); }
+.final-cta-section { padding: 120px 0; background: var(--bg-secondary); text-align: center; position: relative; overflow: hidden; }
+.final-cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 50% 50%, rgba(232, 168, 124, 0.08) 0%, transparent 70%); pointer-events: none; }
+.final-cta-title { font-family: var(--font-serif); font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; color: var(--color-text); line-height: 1.3; margin-bottom: 16px; position: relative; z-index: 1; }
+.final-cta-desc { font-size: 1.05rem; color: var(--color-text-muted); line-height: 1.8; margin-bottom: 32px; position: relative; z-index: 1; }
+.final-cta-price { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 28px; flex-wrap: wrap; position: relative; z-index: 1; }
+.final-original { font-size: 1rem; color: var(--color-text-dim); text-decoration: line-through; }
+.final-price { font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--color-gold); }
+.btn-final { font-size: 1.15rem; padding: 20px 52px; position: relative; z-index: 1; margin-bottom: 20px; }
+.final-guarantee { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 0.88rem; color: var(--color-text-dim); position: relative; z-index: 1; }
+.final-guarantee i { color: #4CAF50; }
+.footer { background: #0F0F1A; padding: 48px 0 32px; text-align: center; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+.footer-logo-text { font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700; color: var(--color-gold); margin-bottom: 12px; }
+.footer-tagline { font-size: 0.85rem; color: var(--color-text-dim); margin-bottom: 24px; }
+.footer-links { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 24px; margin-bottom: 24px; }
+.footer-links a { font-size: 0.85rem; color: var(--color-text-dim); transition: color var(--transition); }
+.footer-links a:hover { color: var(--color-gold); }
+.footer-copy { font-size: 0.8rem; color: var(--color-text-dim); opacity: 0.6; }
+.floating-cta { position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%); z-index: 900; opacity: 0; pointer-events: none; transition: opacity 0.4s ease, transform 0.4s ease; white-space: nowrap; }
+.floating-cta.visible { opacity: 1; pointer-events: all; }
+.btn-floating { font-size: 0.95rem; padding: 14px 28px; box-shadow: 0 8px 32px rgba(200, 75, 49, 0.5); }
+.fade-in-up { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.fade-in-up.visible { opacity: 1; transform: translateY(0); }
+@media (max-width: 768px) {
+  .instructor-wrapper { flex-direction: column; text-align: center; gap: 32px; }
+  .instructor-stats { justify-content: center; }
+  .instructor-divider { margin: 0 auto 20px; }
+  .hero-meta { gap: 12px; }
+  .pricing-card { padding: 32px 24px; }
+  .countdown-item { min-width: 58px; padding: 10px 12px; }
+  .countdown-item span { font-size: 1.6rem; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .pain-grid { grid-template-columns: 1fr; }
+  .chapter-header { flex-wrap: wrap; gap: 10px; }
+  .btn-floating { font-size: 0.85rem; padding: 12px 18px; }
+  .floating-cta { bottom: 16px; width: calc(100% - 32px); }
+  .btn-floating { width: 100%; justify-content: center; }
+}
+@media (max-width: 480px) {
+  .countdown-item { min-width: 48px; padding: 8px 10px; }
+  .countdown-item span { font-size: 1.3rem; }
+  .countdown-sep { font-size: 1.4rem; }
+  .pricing-amount { font-size: 3rem; }
+  .hero { padding: 90px 0 80px; }
+}
+</style>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <div class="nav-logo-icon">🍶</div>
+        餐飲創業實戰班
+      </a>
+      <a href="#pricing" class="nav-cta-btn">立即報名 <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="container hero-content">
+      <div class="hero-badge"><i class="fas fa-fire"></i> 限時特價優惠中</div>
+      <h1 class="hero-title">
+        餐飲創業實戰班
+        <span class="hero-title-sub">讓你避免 <em>90%</em> 的新手地雷</span>
+      </h1>
+      <p class="hero-desc">
+        五大章節・十五堂課・從零到開店的完整指南<br />
+        由擁有近 10 年居酒屋實戰經驗的 Nick 老師，帶你用最少的試錯成本，走出最穩的創業第一步。
+      </p>
+      <div class="hero-meta">
+        <span><i class="fas fa-play-circle"></i> 15 堂精華課程</span>
+        <span><i class="fas fa-infinity"></i> 永久觀看</span>
+        <span><i class="fas fa-shield-alt"></i> 30 天退款保證</span>
+      </div>
+      <div class="hero-price">
+        <span class="hero-original-price">原價 NT$12,800</span>
+        <span class="hero-current-price">NT$2,980</span>
+      </div>
+      <a href="#pricing" class="btn-primary btn-hero">
+        <i class="fas fa-bolt"></i> 限時搶購・立即報名
+      </a>
+      <div class="countdown-wrapper">
+        <p class="countdown-label"><i class="fas fa-clock"></i> 限時優惠倒數</p>
+        <div class="countdown" id="countdown">
+          <div class="countdown-item"><span id="cd-days">00</span><label>天</label></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item"><span id="cd-hours">00</span><label>時</label></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item"><span id="cd-minutes">00</span><label>分</label></div>
+          <div class="countdown-sep">:</div>
+          <div class="countdown-item"><span id="cd-seconds">00</span><label>秒</label></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint"><i class="fas fa-chevron-down"></i></div>
+  </section>
+
+  <section class="pain-section" id="pain">
+    <div class="container">
+      <div class="section-label">你是否也有這些困擾？</div>
+      <h2 class="section-title">開一間餐廳，<br /><span class="highlight">真的沒你想的那麼簡單</span></h2>
+      <div class="pain-grid">
+        <div class="pain-card"><div class="pain-icon"><i class="fas fa-question-circle"></i></div><p>「我有熱情、有手藝，但不知道從哪裡開始？」</p></div>
+        <div class="pain-card"><div class="pain-icon"><i class="fas fa-money-bill-wave"></i></div><p>「開店前準備了300萬，結果半年就燒完了…」</p></div>
+        <div class="pain-card"><div class="pain-icon"><i class="fas fa-map-marker-alt"></i></div><p>「選了個看起來人潮很多的地點，卻根本沒人進來…」</p></div>
+        <div class="pain-card"><div class="pain-icon"><i class="fas fa-users"></i></div><p>「員工管理、排班、離職，每天都在處理人的問題…」</p></div>
+        <div class="pain-card"><div class="pain-icon"><i class="fas fa-chart-line"></i></div><p>「生意看起來不錯，但每個月結帳還是虧損…」</p></div>
+        <div class="pain-card"><div class="pain-icon"><i class="fas fa-store"></i></div><p>「開了第一間店，想展店卻不知道怎麼複製成功模式…」</p></div>
+      </div>
+      <div class="pain-cta">
+        <p>這些問題，Nick 老師都親身踩過，也都找到了解法。</p>
+        <a href="#curriculum" class="btn-outline">看看課程如何解決 <i class="fas fa-arrow-down"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="curriculum-section" id="curriculum">
+    <div class="container">
+      <div class="section-label">課程內容</div>
+      <h2 class="section-title">五大章節・十五堂課<br /><span class="highlight">完整覆蓋餐飲創業全流程</span></h2>
+      <p class="section-desc">從心態建立、市場調查、到財務管理、行銷策略，每一堂課都是真實經驗的淬鍊。</p>
+      <div class="curriculum-list">
+        <div class="chapter-card" data-chapter="1">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-num">Chapter 01</div>
+            <div class="chapter-info"><h3>創業前的心理準備與市場調查</h3><span class="chapter-lessons">3 堂課</span></div>
+            <i class="fas fa-chevron-down chapter-toggle-icon"></i>
+          </div>
+          <div class="chapter-body">
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>90% 餐飲創業失敗的真正原因</strong><p>拆解餐飲業最常見的致命錯誤：過度樂觀的營收預估、忽略隱形成本、產品迷思。用真實案例帶你建立正確的創業心態。</p></div></div>
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>如何找到你的餐飲定位</strong><p>透過定位三角模型——「你擅長什麼」、「市場需要什麼」、「競爭對手沒做好什麼」，找到最佳切入點，完成品牌定位畫布。</p></div></div>
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>競爭對手分析實戰教學</strong><p>像偵探一樣系統化分析競爭對手，從菜單、定價、評論、社群全面掌握，找出競品弱點與市場空白。</p></div></div>
+          </div>
+        </div>
+        <div class="chapter-card" data-chapter="2">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-num">Chapter 02</div>
+            <div class="chapter-info"><h3>選址、裝潢與開店前的關鍵決策</h3><span class="chapter-lessons">3 堂課</span></div>
+            <i class="fas fa-chevron-down chapter-toggle-icon"></i>
+          </div>
+          <div class="chapter-body">
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>黃金店面選址公式</strong><p>解析人流 ≠ 客流的真相，教你用「商圈評估表」分析地租比、目標客群動線、周邊業態，找到最適合你品牌的店面位置。</p></div></div>
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>裝潢預算控制與設計避坑</strong><p>揭示裝潢報價的水分有多深，教你看懂工程報價單、如何與設計師談判、哪些地方值得花錢、哪些可以省。</p></div></div>
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>設備採購與廚房動線規劃</strong><p>廚房設備採購的眉角，新品 vs 二手設備的評估，動線規劃如何影響出餐速度與員工效率，實地案例完整拆解。</p></div></div>
+          </div>
+        </div>
+        <div class="chapter-card" data-chapter="3">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-num">Chapter 03</div>
+            <div class="chapter-info"><h3>菜單設計、定價策略與成本控制</h3><span class="chapter-lessons">3 堂課</span></div>
+            <i class="fas fa-chevron-down chapter-toggle-icon"></i>
+          </div>
+          <div class="chapter-body">
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>菜單工程學：讓菜單幫你賺更多</strong><p>用餐廳管理學的「菜單工程矩陣」分析明星品項、現金牛、難題與狗，打造讓顧客自動點高利潤品項的菜單設計。</p></div></div>
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>定價心理學與毛利計算</strong><p>食材成本率的黃金比例、如何用心理定價讓客單價提升、套餐設計的邏輯，讓你每一道菜都賣在最有利的價位。</p></div></div>
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>食材成本管控與庫存管理</strong><p>食材耗損率如何計算、廠商議價技巧、庫存先進先出原則、如何建立每日成本回報表，讓每分錢都花在刀口上。</p></div></div>
+          </div>
+        </div>
+        <div class="chapter-card" data-chapter="4">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-num">Chapter 04</div>
+            <div class="chapter-info"><h3>人員管理、SOP 建立與營運系統化</h3><span class="chapter-lessons">3 堂課</span></div>
+            <i class="fas fa-chevron-down chapter-toggle-icon"></i>
+          </div>
+          <div class="chapter-body">
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>招募、訓練與留住好員工</strong><p>餐飲業人員流動率超高的根本原因，如何撰寫有效招募文案、面試技巧、試用期評估、以及建立讓員工願意久留的文化。</p></div></div>
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>SOP 建立：讓店不靠你也能跑</strong><p>從開店到關店的標準作業流程建立，廚房出餐 SOP、外場服務 SOP、如何讓新人三天上手，打造不依賴老闆的運營系統。</p></div></div>
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>財務報表解讀與損益管理</strong><p>看懂餐廳三大報表：損益表、現金流量表、資產負債表，設定每月財務目標、如何在虧損時及時止損並調整策略。</p></div></div>
+          </div>
+        </div>
+        <div class="chapter-card" data-chapter="5">
+          <div class="chapter-header" onclick="toggleChapter(this)">
+            <div class="chapter-num">Chapter 05</div>
+            <div class="chapter-info"><h3>行銷策略、口碑經營與展店規劃</h3><span class="chapter-lessons">3 堂課</span></div>
+            <i class="fas fa-chevron-down chapter-toggle-icon"></i>
+          </div>
+          <div class="chapter-body">
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>開幕行銷策略與社群經營</strong><p>開幕前三個月的行銷時間軸規劃，如何用低成本打造開幕熱潮，Instagram／Google Maps 優化，讓新客源源不絕。</p></div></div>
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>外送平台操作與口碑管理</strong><p>Uber Eats／Foodpanda 上架優化技巧、如何回應負評轉危為機、建立忠實回頭客的 CRM 策略與會員制度設計。</p></div></div>
+            <div class="lesson-item"><i class="fas fa-play-circle"></i><div><strong>從一間店到多間店：展店複製系統</strong><p>什麼時候該展店、如何評估展店時機、加盟 vs 直營的利弊分析、品牌標準化文件建立，讓成功可以被複製。</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="instructor-section" id="instructor">
+    <div class="container">
+      <div class="section-label">講師介紹</div>
+      <div class="instructor-wrapper">
+        <div class="instructor-avatar-wrap">
+          <div class="instructor-avatar">🍶</div>
+          <div class="instructor-badge-wrap">
+            <span class="instructor-badge"><i class="fas fa-store"></i> 近10年居酒屋經營</span>
+          </div>
+        </div>
+        <div class="instructor-info">
+          <p class="instructor-subtitle">課程講師</p>
+          <h2 class="instructor-name">Nick</h2>
+          <div class="instructor-divider"></div>
+          <p class="instructor-bio">Nick 並非科班出身，他沒有餐飲管理學位，也沒有米其林背景。他的起點，和你我一樣——只是一個懷抱夢想、什麼都不懂就衝進去的創業新手。</p>
+          <p class="instructor-bio">在近 10 年的居酒屋經營過程中，他嚐過燈火通明卻月月虧損的苦，也走過員工集體離職的崩潰夜晚。那些用真金白銀換來的教訓，成了他最珍貴的資產。</p>
+          <p class="instructor-bio">他創立這堂課，不是要告訴你成功有多美好，而是要把那些<strong>「沒人告訴你、但最容易讓你賠錢的事」</strong>，一五一十地攤在你面前。</p>
+          <div class="instructor-stats">
+            <div class="stat-item"><strong>10年</strong><span>餐飲實戰經驗</span></div>
+            <div class="stat-item"><strong>15堂</strong><span>精華課程</span></div>
+            <div class="stat-item"><strong>1000+</strong><span>學員受益</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-label">學員見證</div>
+      <h2 class="section-title">他們上完課後，<span class="highlight">真的開店了</span></h2>
+      <p class="section-desc">真實學員的回饋，不經修飾。</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card"><div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="testimonial-text">「以前覺得有熱情就夠了，上完 Nick 的課才知道自己差點犯下多少錯誤。光是成本控制那堂課，就讓我省下了超過 20 萬的開店預算。」</p><div class="testimonial-author"><div class="testimonial-avatar">A</div><div><strong>Amber C.</strong><span>現為台中早午餐店老闆</span></div></div></div>
+        <div class="testimonial-card"><div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="testimonial-text">「選址那章真的救了我。我原本看上一個租金很低的地點，照著課程的商圈評估表一分析，才發現根本沒有目標客群，當機立斷換了地方，現在生意很穩定。」</p><div class="testimonial-author"><div class="testimonial-avatar">J</div><div><strong>Jason L.</strong><span>現為新竹拉麵店老闆</span></div></div></div>
+        <div class="testimonial-card"><div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="testimonial-text">「SOP 那堂課徹底改變了我的管理方式。以前店裡完全靠我，我一請假就天下大亂。現在員工照著流程跑，我終於可以放假了。」</p><div class="testimonial-author"><div class="testimonial-avatar">M</div><div><strong>Maggie W.</strong><span>現為台北輕食咖啡廳老闆</span></div></div></div>
+        <div class="testimonial-card"><div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div><p class="testimonial-text">「Nick 分享失敗經驗的部分讓我印象最深刻。他沒有裝成功人士，而是真誠地告訴你他怎麼跌倒的。這種真實感讓整個課程非常有說服力。」</p><div class="testimonial-author"><div class="testimonial-avatar">K</div><div><strong>Kevin H.</strong><span>現為高雄居酒屋老闆</span></div></div></div>
+        <div class="testimonial-card"><div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="testimonial-text">「我是完全的餐飲門外漢，上這堂課之前超級焦慮。但 Nick 的課講解非常清楚，每個概念都有實際案例，看完就知道怎麼做。現在我的小火鍋店開幕三個月已經回本了！」</p><div class="testimonial-author"><div class="testimonial-avatar">S</div><div><strong>Sarah T.</strong><span>現為台南小火鍋店老闆</span></div></div></div>
+        <div class="testimonial-card"><div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div><p class="testimonial-text">「定價策略那堂讓我大開眼界。我把菜單重新設計後，平均客單價提升了 35%，但客人卻覺得更划算。這就是菜單工程學的威力。」</p><div class="testimonial-author"><div class="testimonial-avatar">D</div><div><strong>Danny F.</strong><span>現為台北義式料理老闆</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-label">立即報名</div>
+      <h2 class="section-title">一次投資，<span class="highlight">終身受用</span></h2>
+      <p class="section-desc">與其花幾十萬去試錯，不如先花 2,980 元把地雷全部搞清楚。</p>
+      <div class="pricing-card-wrap">
+        <div class="pricing-card">
+          <div class="pricing-badge">🔥 限時特價</div>
+          <h3 class="pricing-title">餐飲創業實戰班</h3>
+          <div class="pricing-original">原價 <s>NT$12,800</s></div>
+          <div class="pricing-price"><span class="pricing-currency">NT$</span><span class="pricing-amount">2,980</span></div>
+          <div class="pricing-discount-tag">節省 NT$9,820（折扣 77%）</div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check"></i> 五大章節・15 堂精華影音課程</li>
+            <li><i class="fas fa-check"></i> 永久觀看，不限次數重複學習</li>
+            <li><i class="fas fa-check"></i> 課程專屬學習資源下載</li>
+            <li><i class="fas fa-check"></i> 品牌定位畫布模板</li>
+            <li><i class="fas fa-check"></i> 商圈評估表工具</li>
+            <li><i class="fas fa-check"></i> 財務損益試算表</li>
+            <li><i class="fas fa-check"></i> 30 天無條件退款保證</li>
+          </ul>
+          <a href="#" class="btn-primary btn-pricing" onclick="handleEnroll(event)">
+            <i class="fas fa-bolt"></i> 立即報名・開始學習
+          </a>
+          <p class="pricing-guarantee"><i class="fas fa-shield-alt"></i><strong>30 天退款保證</strong>：若上課後覺得不符合期待，無條件全額退款，零風險。</p>
+          <div class="pricing-countdown">
+            <p><i class="fas fa-clock"></i> 優惠剩餘時間</p>
+            <div class="countdown countdown-sm" id="countdown2">
+              <div class="countdown-item"><span id="cd2-days">00</span><label>天</label></div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-item"><span id="cd2-hours">00</span><label>時</label></div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-item"><span id="cd2-minutes">00</span><label>分</label></div>
+              <div class="countdown-sep">:</div>
+              <div class="countdown-item"><span id="cd2-seconds">00</span><label>秒</label></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-label">常見問題</div>
+      <h2 class="section-title">你可能想問的，<span class="highlight">這裡都有答案</span></h2>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>這堂課適合完全沒有餐飲背景的人嗎？</span><i class="fas fa-plus faq-icon"></i></div><div class="faq-answer"><p>完全適合！課程設計從最基礎的心態建立開始，不預設你有任何餐飲知識。無論你是上班族想轉職創業、有廚藝想開店，還是已經在規劃中的準老闆，都能從這堂課獲益。</p></div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>課程購買後可以看多久？</span><i class="fas fa-plus faq-icon"></i></div><div class="faq-answer"><p>購買後可以<strong>永久觀看</strong>，不限次數。課程內容未來若有更新，已購買的學員也可以免費獲得最新版本。</p></div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>如果看了覺得不值得，可以退款嗎？</span><i class="fas fa-plus faq-icon"></i></div><div class="faq-answer"><p>可以。我們提供 <strong>30 天無條件退款保證</strong>。購買後 30 天內，只要你覺得課程不符合期待，聯繫客服即可獲得全額退款，完全零風險。</p></div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>課程是影片形式嗎？可以在手機上看嗎？</span><i class="fas fa-plus faq-icon"></i></div><div class="faq-answer"><p>是的，課程為預錄影片形式，可隨時暫停、倒轉，依照自己的節奏學習。支援電腦、平板、手機等各種裝置，方便隨時隨地學習。</p></div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>課程有提供實體教材或講義嗎？</span><i class="fas fa-plus faq-icon"></i></div><div class="faq-answer"><p>課程提供多份可下載的數位工具表單，包括品牌定位畫布、商圈評估表、財務損益試算表等，都可以直接套用在你的創業規劃中。</p></div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>限時特價還有多久？</span><i class="fas fa-plus faq-icon"></i></div><div class="faq-answer"><p>目前的限時特價 NT$2,980 為限期優惠，倒數計時結束後將恢復原價 NT$12,800。建議把握機會，早買早學習，早一天避開地雷就省下更多。</p></div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>支援哪些付款方式？</span><i class="fas fa-plus faq-icon"></i></div><div class="faq-answer"><p>支援信用卡、LINE Pay、街口支付等多種線上支付方式，結帳流程快速安全，全程 SSL 加密保護。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta-section" id="final-cta">
+    <div class="container">
+      <h2 class="final-cta-title">現在就開始，<br />讓 Nick 陪你走出最穩的第一步</h2>
+      <p class="final-cta-desc">餐飲創業的路上，你不需要再孤單摸索。<br />把 Nick 用 10 年換來的經驗，裝進你的腦袋。</p>
+      <div class="final-cta-price">
+        <span class="final-original">原價 NT$12,800</span>
+        <span class="final-price">限時特價 NT$2,980</span>
+      </div>
+      <a href="#" class="btn-primary btn-final" onclick="handleEnroll(event)">
+        <i class="fas fa-bolt"></i> 立即報名・開始創業之旅
+      </a>
+      <p class="final-guarantee"><i class="fas fa-shield-alt"></i> 30 天退款保證，零風險入學</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo-text">🍶 餐飲創業實戰班</div>
+      <p class="footer-tagline">讓你避免 90% 的新手地雷</p>
+      <div class="footer-links">
+        <a href="#hero">首頁</a>
+        <a href="#curriculum">課程內容</a>
+        <a href="#instructor">講師介紹</a>
+        <a href="#pricing">立即報名</a>
+        <a href="#faq">常見問題</a>
+      </div>
+      <p class="footer-copy">© 2025 餐飲創業實戰班 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <div class="floating-cta" id="floatingCta">
+    <a href="#pricing" class="btn-primary btn-floating">
+      <i class="fas fa-bolt"></i> 限時特價 NT$2,980・立即報名
+    </a>
+  </div>
+
+<script>
+(function initCountdown() {
+  const STORAGE_KEY = 'fnb_deadline';
+  let deadline = localStorage.getItem(STORAGE_KEY);
+  if (!deadline) {
+    const now = new Date();
+    now.setDate(now.getDate() + 7);
+    deadline = now.getTime();
+    localStorage.setItem(STORAGE_KEY, deadline);
+  } else {
+    deadline = parseInt(deadline, 10);
+    if (deadline < Date.now()) {
+      const now = new Date();
+      now.setDate(now.getDate() + 7);
+      deadline = now.getTime();
+      localStorage.setItem(STORAGE_KEY, deadline);
+    }
+  }
+  function pad(n) { return String(n).padStart(2, '0'); }
+  const prevValues = {};
+  function animateFlip(id, value) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    if (prevValues[id] !== value) {
+      el.classList.remove('flip');
+      void el.offsetWidth;
+      el.classList.add('flip');
+      prevValues[id] = value;
+    }
+  }
+  function updateCountdown() {
+    const now = Date.now();
+    const diff = Math.max(0, deadline - now);
+    const days    = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours   = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    const ids = ['cd-days','cd-hours','cd-minutes','cd-seconds'];
+    const vals = [days, hours, minutes, seconds];
+    ids.forEach((id, i) => { const el = document.getElementById(id); if (el) el.textContent = pad(vals[i]); });
+    const ids2 = ['cd2-days','cd2-hours','cd2-minutes','cd2-seconds'];
+    ids2.forEach((id, i) => { const el = document.getElementById(id); if (el) el.textContent = pad(vals[i]); });
+    animateFlip('cd-seconds', seconds);
+    animateFlip('cd2-seconds', seconds);
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+})();
+
+(function initNavbar() {
+  const navbar = document.getElementById('navbar');
+  if (!navbar) return;
+  function onScroll() { navbar.classList.toggle('scrolled', window.scrollY > 60); }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+(function initFloatingCta() {
+  const floatingCta = document.getElementById('floatingCta');
+  const heroSection = document.getElementById('hero');
+  const pricingSection = document.getElementById('pricing');
+  if (!floatingCta || !heroSection) return;
+  function onScroll() {
+    const heroBottom = heroSection.getBoundingClientRect().bottom;
+    const pricingTop = pricingSection ? pricingSection.getBoundingClientRect().top : Infinity;
+    const windowH = window.innerHeight;
+    floatingCta.classList.toggle('visible', heroBottom < 0 && pricingTop > windowH);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+
+function toggleChapter(headerEl) {
+  const card = headerEl.closest('.chapter-card');
+  const body = card.querySelector('.chapter-body');
+  const isActive = card.classList.contains('active');
+  document.querySelectorAll('.chapter-card').forEach(c => {
+    c.classList.remove('active');
+    const b = c.querySelector('.chapter-body');
+    if (b) b.classList.remove('open');
+  });
+  if (!isActive) { card.classList.add('active'); if (body) body.classList.add('open'); }
+}
+
+function toggleFaq(questionEl) {
+  const item = questionEl.closest('.faq-item');
+  const answer = item.querySelector('.faq-answer');
+  const isActive = item.classList.contains('active');
+  document.querySelectorAll('.faq-item').forEach(i => {
+    i.classList.remove('active');
+    const a = i.querySelector('.faq-answer');
+    if (a) a.classList.remove('open');
+  });
+  if (!isActive) { item.classList.add('active'); if (answer) answer.classList.add('open'); }
+}
+
+(function initScrollAnimations() {
+  const animTargets = ['.section-label','.section-title','.section-desc','.pain-card','.chapter-card','.testimonial-card','.pricing-card','.faq-item','.instructor-wrapper','.pain-cta','.final-cta-title','.final-cta-desc','.final-cta-price','.btn-final','.final-guarantee'];
+  document.querySelectorAll(animTargets.join(',')).forEach(el => el.classList.add('fade-in-up'));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+})();
+
+function handleEnroll(event) {
+  event.preventDefault();
+  // 把這行換成你的付款連結：
+  // window.location.href = 'https://your-payment-link.com';
+  alert('報名功能即將開放！請聯繫 Nick 老師。');
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+
+(function injectFlipStyle() {
+  const style = document.createElement('style');
+  style.textContent = `@keyframes flipNum { 0% { transform: rotateX(0deg); } 50% { transform: rotateX(-90deg); opacity: 0.3; } 51% { transform: rotateX(90deg); opacity: 0.3; } 100% { transform: rotateX(0deg); opacity: 1; } } .flip { animation: flipNum 0.4s ease; display: inline-block; }`;
+  document.head.appendChild(style);
+})();
+
+window.addEventListener('load', () => {
+  document.body.style.opacity = '0';
+  document.body.style.transition = 'opacity 0.5s ease';
+  requestAnimationFrame(() => { document.body.style.opacity = '1'; });
+  const firstChapter = document.querySelector('.chapter-card');
+  if (firstChapter) {
+    firstChapter.classList.add('active');
+    const body = firstChapter.querySelector('.chapter-body');
+    if (body) body.classList.add('open');
+  }
+});
+</script>
+</body>
+</html>
