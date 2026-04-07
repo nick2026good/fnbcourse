@@ -91,6 +91,9 @@ img { max-width: 100%; display: block; }
 .pain-card p { font-size: 0.95rem; color: var(--color-text-muted); line-height: 1.6; font-style: italic; }
 .pain-cta { text-align: center; }
 .pain-cta p { font-size: 1.1rem; color: var(--color-text); margin-bottom: 20px; }
+.preview-section { padding: 100px 0; background: var(--bg-secondary); }
+.preview-video-wrapper { position: relative; width: 100%; max-width: 800px; margin: 0 auto; padding-top: 45%; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 40px rgba(232, 168, 124, 0.15); border: 1px solid var(--color-border); }
+.preview-video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 .curriculum-section { padding: 100px 0; background: var(--bg-primary); }
 .curriculum-list { display: flex; flex-direction: column; gap: 16px; }
 .chapter-card { background: var(--bg-card); border: 1px solid var(--color-border); border-radius: var(--radius); overflow: hidden; transition: border-color var(--transition); }
@@ -288,6 +291,18 @@ img { max-width: 100%; display: block; }
       <div class="pain-cta">
         <p>這些問題，Nick 老師都親身踩過，也都找到了解法。</p>
         <a href="#curriculum" class="btn-outline">看看課程如何解決 <i class="fas fa-arrow-down"></i></a>
+      </div>
+    </div>
+  </section>
+
+<!-- ══ FREE PREVIEW ══ -->
+  <section class="preview-section" id="preview">
+    <div class="container" style="text-align:center;">
+      <div class="section-label">免費預覽</div>
+      <h2 class="section-title">先看看課程風格，<br /><span class="highlight">再決定要不要買</span></h2>
+      <p class="section-desc" style="margin-left:auto;margin-right:auto;">這是第一章第一堂課的完整內容，讓你親身體驗課程品質</p>
+      <div class="preview-video-wrapper">
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="免費預覽：第一章第一堂" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </div>
   </section>
